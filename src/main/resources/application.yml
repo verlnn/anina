@@ -1,0 +1,20 @@
+logging:
+  level:
+    com.zaxxer.hikari: TRACE
+    com.zaxxer.hikari.HikariConfig: DEBUG
+mybatis:
+  type-aliases-package: io.asquare.anina.**.dto
+  mapper-locations: mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://dev.1nfra.kr:2002/postgres
+    username: postgres
+    password: test!@#
+  thymeleaf:
+    prefix: classpath:static/
+    suffix: .html
+    cache: false
